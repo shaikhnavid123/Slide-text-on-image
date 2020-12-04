@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slides text on images </title>
+	<style type="text/css">
+		.slide
+		{
+			position: relative;
+			display: inline-block;
+			overflow: hidden;
+		}
+		.slide img
+		{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.slide-content
+		{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			background: rgba(225, 35, 69, 0.9);
+			padding: 20px;
+			color: white;
+			box-sizing: border-box;
+			transition: transform 0.3s ease;
+		}
+		.slide:hover .slide-content
+		{
+			transform: translate(0, 0);
+		}
+		.slide-top .slide-content
+		{
+			transform: translate(0, -100%);
+		}
+		.slide-right .slide-content
+		{
+			transform: translate(100%, 0);
+		}
+		.slide-left .slide-content
+		{
+			transform: translate(-100%, 0);
+		}
+		.slide-bottom .slide-content
+		{
+			transform: translate(0, 100%);
+		}
+
+	</style>
+</head>
+<body>
+
+	<section>
+		<h4>slide from top</h4>
+		<div class="slide slide-top">
+			<div class="slide-content">
+			Lorem ipsum dolor sit amet, <br>consecteur adipisicing elit.
+			</div>
+			<img src="05.jpg">
+		</div>
+	</section>
+
+	<section>
+		<h4>slide from left</h4>
+		<div class="slide slide-left">
+			<div class="slide-content">
+			Lorem ipsum dolor sit amet, <br>consecteur adipisicing elit.
+			</div>
+			<img src="02.jpg">
+		</div>
+	</section>
+
+	<section>
+		<h4>slide from bottom</h4>
+		<div class="slide slide-bottom">
+			<div class="slide-content">
+			Lorem ipsum dolor sit amet, <br>consecteur adipisicing elit.
+			</div>
+			<img src="04.jpg">
+		</div>
+	</section>
+
+	<section>
+		<h4>slide from right</h4>
+		<div class="slide slide-right">
+			<div class="slide-content">
+			Lorem ipsum dolor sit amet, <br>consecteur adipisicing elit.
+			</div>
+			<img src="09.jpg">
+		</div>
+	</section>
+
+</body>
+</html>
